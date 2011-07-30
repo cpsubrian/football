@@ -8,9 +8,12 @@ clone when I need it.
   * Basic Express app with:
     * Static files served from /public/(css|js|images)
     * jqtpl views
+    * less css
     * Application settings in settings.js
     * Application helpers in helpers.js
-  * .gitignore so you don't commit node_modules/
+  * .gitignore excludes
+    * node_modules/*
+    * public/css/*.css  (your styles should be .less files)
 
 
 ### Dont Forget to run <code>npm install</code>
