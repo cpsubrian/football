@@ -39,5 +39,8 @@ app.get('/', function(req, res){
   res.render('index');
 });
 
-app.listen(settings.port);
-console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
+//Only listen on $ node app.js
+if (!module.parent) {
+  app.listen(settings.port);
+  console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
+}
