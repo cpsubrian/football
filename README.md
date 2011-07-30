@@ -9,7 +9,7 @@ clone when I need it.
     * Static files served from /public/(css|js|images)
     * jqtpl views
     * less css
-    * Application settings in settings.js
+    * Application settings in conf.js
     * Application helpers in helpers.js
   * .gitignore excludes
     * node_modules/*

@@ -3,10 +3,10 @@
  * Module dependencies.
  */
 
-var express = require('express');
-var app = module.exports = express.createServer();
-var settings = require('./settings.js');
-var helpers = require('./helpers.js')(app, settings);
+var express = require('express'),
+    app = module.exports = express.createServer(),
+    conf = require('./conf.js'),
+    helpers = require('./helpers.js')(app, settings);
 
 // Configuration
 app.configure(function(){
@@ -16,7 +16,7 @@ app.configure(function(){
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(express.cookieParser());
-  app.use(express.session({ secret:  settings.session.secret}));
+  app.use(express.session({ secret:  conf.session.secret}));
   app.use(express.compiler({ src: __dirname + '/public', enable: ['less'] }));
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
@@ -41,6 +41,6 @@ app.get('/', function(req, res){
 
 //Only listen on $ node app.js
 if (!module.parent) {
-  app.listen(settings.port);
+  app.listen(conf.port);
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 }
