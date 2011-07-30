@@ -4,8 +4,6 @@
  */
 
 var express = require('express');
-var jqtpl = require('jqtpl');
-
 var app = module.exports = express.createServer();
 var settings = require('./settings.js');
 var helpers = require('./helpers.js')(app, settings);
