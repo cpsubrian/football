@@ -4,6 +4,7 @@ Since I prefer jqtpl to jade, I made this boilerplate node app to
 clone when I need it.
 
 Details:
+
  * Basic Express app with:
     * Static files served from /public/(css|js|images)
     * jqtpl views
