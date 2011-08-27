@@ -2,12 +2,21 @@
 <html>
   <head>
     <title>${title}</title>
-    <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.1.1.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     {{html headScripts}}
   </html>
   <body>
     <div class="container">
+      <header>
+        <h1>${title}</h1>
+        <section id="auth">
+          {{if everyauth.loggedIn}}
+            <img src="${everyauth.yahoo.user.image.imageUrl}" width="28" height="28" />
+            <a href="/logout" class="btn">Log-out</a>
+          {{/if}}
+        </section>
+      </header>
       {{html body}}
       {{html footerScripts}}
     </dov>

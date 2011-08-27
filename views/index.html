@@ -1,4 +1,17 @@
-<h1>${title}</h1>
-<p>
-   Welcome to ${title}
-</p>
+{{if !everyauth.loggedIn}}
+  <section id="content" class="login">
+    <h3>Sign-in with your Yahoo account</h3>
+    <a href="/auth/yahoo"><img src="http://l.yimg.com/a/i/reg/openid/buttons/2_new.png" /></a>
+  </section>
+{{else}}
+  <section id="content">
+    <form method="post" action="/">
+      <textarea name="api_url" style="width: 90%; height: 2em;"></textarea>
+      <input type="submit" class="btn primary" value="Post" />
+    </form>
+    <pre>
+${results}
+    </pre>
+  </section>
+  <!-- Templates -->
+{{/if}}

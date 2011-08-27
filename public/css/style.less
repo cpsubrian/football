@@ -1,8 +1,42 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+@import "/public/css/preboot.less";
 
-a {
-  color: #00B7FF;
+/* Varaibles */
+@grid: 10px; 
+
+/* General Styles */
+html, body {
+  height: 100%;
+}
+body {
+  #gradient > .vertical(#333,#111);
+  padding-top: @grid;
+}
+.container {
+  padding: @grid * 2; 
+  .border-radius(@grid);
+  #gradient > .vertical(#fafafa,#eee);
+  .box-shadow(1px 1px 3px rgba(0, 0, 0, 0.5) inset);
+  min-height: 80%;
+}
+header {
+  padding-bottom: @grid;
+  margin-bottom: @grid;
+  border-bottom: 2px solid #ddd; 
+  position: relative;
+}
+header h1 {
+  margin: 0;
+  padding: 0;
+}
+header #auth {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+header #auth img {
+  vertical-align: top;
+  margin-right: 10px;
+}
+#content.login {
+  text-align: center;  
 }
