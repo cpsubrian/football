@@ -1,19 +1,5 @@
-# BoilerPlate Node.js Application
+# Fantasy Football Yahoo WebApp
 
-Since I prefer jqtpl to jade, I made this boilerplate node app to
-clone when I need it.
-
-## Details:
-
-  * Basic Express app with:
-    * Static files served from /public/(css|js|images)
-    * jqtpl views
-    * less css
-    * Application settings in conf.js
-    * Application helpers in helpers.js
-  * .gitignore excludes
-    * node_modules/*
-    * public/css/*.css  (your styles should be .less files)
-
+Rename conf-sample.js to conf.js and updates settings.
 
 ### Dont Forget to run <code>npm install</code>
