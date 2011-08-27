@@ -6,7 +6,7 @@
 var express = require('express'),
     app = module.exports = express.createServer(),
     conf = require('./conf.js'),
-    helpers = require('./helpers.js')(app, settings);
+    helpers = require('./helpers.js')(app, conf);
 
 // Configuration
 app.configure(function(){

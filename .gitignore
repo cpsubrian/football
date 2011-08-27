@@ -1,3 +1,5 @@
 conf.js
 node_modules/*
 public/css/*.css
+logs/*
+pids/*
