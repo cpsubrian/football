@@ -4,12 +4,16 @@
 @grid: 10px; 
 
 /* General Styles */
-html, body {
-  height: 100%;
+html{
+  height: 100%;  
+}
+body {
+  min-height: 100%;
+  height: auto;
 }
 body {
   #gradient > .vertical(#333,#111);
-  padding-top: @grid;
+  padding: (2 * @grid) 0;
 }
 .container {
   padding: @grid * 2; 
@@ -39,4 +43,13 @@ header #auth img {
 }
 #content.login {
   text-align: center;  
+}
+
+/* Fix Syntax Highlight Collisions */
+.syntaxhighlighter .container {
+  width: auto;
+  margin: 0;
+}
+.syntaxhighlighter code {
+  background: transparent;
 }

@@ -1,0 +1,14 @@
+<section id="content">
+  <h3>Make an API Request (<a href="http://developer.yahoo.com/fantasysports/guide">http://developer.yahoo.com/fantasysports/guide</a>)</h3>
+  <form method="post" action="/sandbox">
+    <input type="text" name="api_url" style="width: 80%; height: 2em;" value="{{html api_url}}" />
+    <input type="checkbox" name="json" value="1" style="margin-left: 10px;" /> json
+    <input type="submit" class="btn primary" value="Post" style="margin-left: 10px;" />
+  </form>
+  <pre class="brush: ${format}; gutter: false; toolbar: false;">
+${results}
+  </pre>
+  <script type="text/javascript">
+    SyntaxHighlighter.all()
+  </script>
+</section>
