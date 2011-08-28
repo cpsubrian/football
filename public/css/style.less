@@ -20,7 +20,7 @@ body {
   .border-radius(@grid);
   #gradient > .vertical(#fafafa,#eee);
   .box-shadow(1px 1px 3px rgba(0, 0, 0, 0.5) inset);
-  min-height: 80%;
+  min-height: 400px;
 }
 header {
   padding-bottom: @grid;
@@ -32,6 +32,10 @@ header h1 {
   margin: 0;
   padding: 0;
 }
+header h1 img {
+  vertical-align: top;
+  margin-right: 5px;
+}
 header #auth {
   position: absolute;
   top: 0;
@@ -39,7 +43,9 @@ header #auth {
 }
 header #auth img {
   vertical-align: top;
-  margin-right: 10px;
+}
+header #auth .btn {
+  margin-left: 5px;
 }
 #content.login {
   text-align: center;  

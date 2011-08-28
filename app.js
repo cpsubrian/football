@@ -78,10 +78,27 @@ app.configure('production', function(){
 app.helpers(helpers);
 everyauth.helpExpress(app);
 
+// Yahoo api helper.
+function yahooGet(method, req, _format, callback) {
+  var api = everyauth.yahoo.oauth;
+  var auth = req.session.auth.yahoo;
+  var format = (_format == 'json' || _format == 'js') ? 'json' : 'xml';
+  var url = conf.yahoo.api.base + method + '?format=' + format;
+  api.get(url, auth.accessToken, auth.accessTokenSecret, callback);
+}
+
 // Routes
 app.get('/', function(req, res){
   res.render('index'); 
 });
+app.get('/teams', function(req, res) {
+  var method = 'league/' + conf.yahoo.api.s2011.league_key + '/teams';
+  yahooGet(method, req, 'xml', function(err, data) {
+    res.send(data, {'Content-Type' : 'application/xml'});
+  });
+});
+
+// API sandbox.
 app.get('/sandbox', function(req, res) {
   if (req.user) {
     res.render('sandbox', {results: 'Results will be here'});
