@@ -75,6 +75,9 @@ var AppView = Backbone.View.extend({
     
   },
   
+  collections: {},
+  views: {},
+  
   initialize: function() {
     var app = this;
     _.bindAll(app);
@@ -86,10 +89,7 @@ var AppView = Backbone.View.extend({
         app.el.append(app.views.teams.render().el);
       }
     });
-  },
-  
-  collections: {},
-  views: {},
+  }
 });
 
 // Initaize the application.
